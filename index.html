@@ -1,0 +1,509 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="apple-touch-fullscreen" content="YES" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="no" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta http-equiv="Expires" content="-1" />
+<meta http-equiv="pragram" content="no-cache" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+<link href="css/index.css" rel="stylesheet" />
+<title>听主题曲，猜机器人</title>
+<meta name="sharecontent" data-msg-img="http://www.xinhuatone.com/zttest/20151123/tztqcjqr/images/擎天柱.png" data-msg-title="听主题曲猜机器人" data-msg-content="听主题曲猜机器人" data-msg-callBack="" data-line-img="http://www.xinhuatone.com/zttest/20151123/tztqcjqr/images/擎天柱.png" data-line-title="听主题曲猜机器人" data-line-callBack=""/>
+<script src="js/wxshare.js"></script>
+<style type="text/css">
+*{padding: 0;margin: 0;}
+img{border: none;}
+html,body{height: 100%;}
+
+
+.page{
+    position: relative;/*
+    width: 320px;
+    height: 700px;*/
+    overflow: hidden;
+}
+</style>
+</head>
+<body>
+      <div style="display:none;">
+            <p>听主题曲，猜机器人</p >
+            <img src="http://www.xinhuatone.com/zt/20151123/tztqcjqr/images/fx300.jpg">
+      </div>
+
+          <div id="loading">
+                <div class="spinner">
+                    <div class="spinner-container container1">
+                        <div class="circle1">
+                        </div>
+                        <div class="circle2">
+                        </div>
+                        <div class="circle3">
+                        </div>
+                        <div class="circle4">
+                        </div>
+                    </div>
+                    <div class="spinner-container container2">
+                        <div class="circle1">
+                        </div>
+                        <div class="circle2">
+                        </div>
+                        <div class="circle3">
+                        </div>
+                        <div class="circle4">
+                        </div>
+                    </div>
+                    <div class="spinner-container container3">
+                        <div class="circle1">
+                        </div>
+                        <div class="circle2">
+                        </div>
+                        <div class="circle3">
+                        </div>
+                        <div class="circle4">
+                        </div>
+                    </div>
+                </div>
+                <p style="position:relative;top:50%">
+                    加载中...
+                </p>
+            </div>
+            <!-- <img src="img/icon_up.png" alt="" class="arrow-up pt-page-moveIconUp">
+            -->
+        </div>
+<section>
+  <ul id="main">
+    <li class="liBg1">
+      <!--<div class="bg-proxy btn-start"></div>-->
+      <div class="page page1">
+      <div></divt>
+      <span></span>
+      	<div class="tips1">向下滑动开始测试</div>
+      </div>
+      </li>
+ 
+    <li class="liBg2">
+      <div class="page page3">
+   <!--    <div class="img-bg"></div> -->
+      <div class="container">
+
+        <div class="slide-container">
+          <div class="music-all" style="width:100%">
+            <audio id="music0" class="audio"  src="music/1.mp3"  >
+            您的浏览器不支持 audio 标签。
+            </audio> 
+            <p><img class="bofang" src="images/bofang.png"> 请播放音乐</p>
+          </div> 
+         <!--  <p>miaoshu</p> -->
+          <div class="miaoshu"><img src="images/大白2.png"></div>
+          <div><img class="robotimg" src="images/wenhao.png"></div>
+          <div class="robot-div"><input  type="text" class="robotinput" name="大白" placeholder="请输入中文名（2字）" /></div>
+          <div class="qt">
+            <button class="queding" onclick="queding('大白',null,0)"></button>
+            <button class="tishi" onclick="tishi('images/大白1.png')"></button>
+          </div>
+          
+          <div class="bn"><img class="imgnext"></div>
+          <div class="tips1">向下滑动结束此次测试</div>
+         <!--  <div class="imgnext"><img src="images/nextpage.png"></div> -->
+        </div>
+
+
+        <div class="slide-container">
+          <div class="music-all" style="width:100%">
+            <audio id="music1" class="music"   src="music/2.mp3"  >
+            您的浏览器不支持 audio 标签。
+            </audio> 
+            <p><img class="bofang" src="images/bofang.png">请播放音乐</p>
+          </div> 
+          <div class="miaoshu"><img src="images/擎天柱2.png"></div>
+          <div><img  class="robotimg" src="images/wenhao.png"></div>
+          <div class="robot-div"><input type="text" class="robotinput" name="擎天柱" placeholder="请输入中文名（3字）" /></div>
+          <div class="qt">
+            <button class="queding" onclick="queding('擎天柱',null,1)"></button>
+            <button class="tishi" onclick="tishi('images/擎天柱1.png')"></button>
+          </div>
+          
+          <div><img class="imgbefore"><img class="imgnext"></div>
+          <div class="tips1">向下滑动结束此次测试</div>
+         <!--  <div class="imgnext"><img src="images/nextpage.png"></div> -->
+        </div>
+
+
+        <div class="slide-container">
+          <div class="music-all" style="width:100%">
+            <audio id="music2" class="music"   src="music/3.mp3"  >
+            您的浏览器不支持 audio 标签。
+            </audio> 
+            <p><img class="bofang" src="images/bofang.png">请播放音乐</p>
+          </div> 
+          <div class="miaoshu"><img src="images/机器猫2.png"></div>
+          <div><img  class="robotimg" src="images/wenhao.png"></div>
+          <div class="robot-div"><input type="text" class="robotinput" name="机器猫" placeholder="请输入中文名（3字）"/></div>
+          <div class="qt">
+            <button class="queding" onclick="queding('机器猫',null,2)"></button>
+            <button class="tishi" onclick="tishi('images/机器猫1.png')"></button>
+          </div>
+          
+          <div><img class="imgbefore"><img class="imgnext"></div>
+          <div class="tips1">向下滑动结束此次测试</div>
+          <!-- <div class="imgnext"><img src="images/nextpage.png"></div> -->
+        </div>
+
+
+        <div class="slide-container">
+          <div class="music-all" style="width:100%">
+            <audio id="music3" class="music"   src="music/4.mp3"  >
+            您的浏览器不支持 audio 标签。
+            </audio> 
+            <p><img class="bofang" src="images/bofang.png">请播放音乐</p>
+          </div> 
+          <div class="miaoshu"><img src="images/墨菲2.png"></div>
+          <div><img  class="robotimg" src="images/wenhao.png"></div>
+          <div class="robot-div"><input type="text" class="robotinput" name="墨菲" placeholder="请输入中文名（2字）或电影名（4字）" /></div>
+          <div class="qt">
+            <button class="queding" onclick="queding('墨菲','机械战警',3)"></button>
+            <button class="tishi" onclick="tishi('images/墨菲1.png')"></button>
+          </div>
+          
+          <div><img class="imgbefore"><img class="imgnext"></div>
+          <div class="tips1">向下滑动结束此次测试</div>
+         <!--  <div class="imgnext"><img src="images/nextpage.png"></div> -->
+        </div>
+
+
+        <div class="slide-container">
+          <div class="music-all" style="width:100%">
+            <audio id="music4" class="music"   src="music/5.mp3"  >
+            您的浏览器不支持 audio 标签。
+            </audio> 
+            <p><img class="bofang" src="images/bofang.png">请播放音乐</p>
+          </div> 
+          <div class="miaoshu"><img src="images/大黄蜂2.png"></div>
+          <div><img class="robotimg" src="images/wenhao.png"></div>
+          <div class="robot-div"><input type="text" class="robotinput" name="大黄蜂" placeholder="请输入中文名（3字）"/></div>
+          <div class="qt">
+            <button class="queding" onclick="queding('大黄蜂',null,4)"></button>
+            <button class="tishi" onclick="tishi('images/大黄蜂1.png')"></button>
+          </div>
+          
+          <div><img class="imgbefore"><img class="imgnext"></div>
+          <div class="tips1">向下滑动结束此次测试</div>
+          <!-- <div class="imgnext"><img src="images/nextpage.png"></div> -->
+        </div>
+
+
+        <div class="slide-container">
+          <div class="music-all" style="width:100%">
+            <audio id="music5" class="music"   src="music/6.mp3"  >
+            您的浏览器不支持 audio 标签。
+            </audio> 
+            <p><img class="bofang" src="images/bofang.png">请播放音乐</p>
+          </div> 
+          <div class="miaoshu"><img src="images/瓦力2.png"></div>
+          <div><img class="robotimg" src="images/wenhao.png"></div>
+          <div class="robot-div"><input type="text" class="robotinput" name="瓦力" placeholder="请输入中文名（2字）" /></div>
+          <div class="qt">
+            <button class="queding" onclick="queding('瓦力',null,5)"></button>
+            <button class="tishi" onclick="tishi('images/瓦力1.png')"></button>
+          </div>
+          
+          <div><img class="imgbefore"><img class="imgnext"></div>
+          <div class="tips1">向下滑动结束此次测试</div>
+         <!--  <div class="imgnext"><img src="images/nextpage.png"></div> -->
+        </div>
+
+        <div class="slide-container">
+          <div class="music-all" style="width:100%">
+            <audio id="music6" class="music"   src="music/7.mp3"  >
+            您的浏览器不支持 audio 标签。
+            </audio> 
+            <p><img class="bofang" src="images/bofang.png">请播放音乐</p>
+          </div> 
+          <div class="miaoshu"><img src="images/T8002.png"></div>
+          <div><img  class="robotimg" src="images/wenhao.png"></div>
+          <div class="robot-div"><input type="text" class="robotinput" name="T800" placeholder="请输入型号名（字母大写）或电影名（3字）" /></div>
+          <div class="qt">
+            <button class="queding" onclick="queding('T800','终结者',6)"></button>
+            <button class="tishi" onclick="tishi('images/T8001.png')"></button>
+          </div>
+          
+          <div><img class="imgbefore"><img class="imgnext"></div>
+          <div class="tips1">向下滑动结束此次测试</div>
+          <!-- <div class="imgnext"><img src="images/nextpage.png"></div> -->
+        </div>
+
+        <div class="slide-container">
+          <div class="music-all" style="width:100%">
+            <audio id="music7" class="music"   src="music/8.mp3"  >
+            您的浏览器不支持 audio 标签。
+            </audio> 
+            <p><img class="bofang" src="images/bofang.png">请播放音乐</p>
+          </div> 
+          <div class="miaoshu"><img src="images/伊娃2.png"></div>
+          <div><img  class="robotimg" src="images/wenhao.png"></div>
+          <div class="robot-div"><input type="text" class="robotinput" name="伊娃" placeholder="请输入中文名（2字）"  /></div>
+          <div class="qt">
+            <button class="queding" onclick="queding('伊娃',null,7)"></button>
+            <button class="tishi" onclick="tishi('images/伊娃1.png')"></button>
+          </div>
+          
+          <div><img class="imgbefore"><img class="imgnext"></div>
+          <div class="tips1">向下滑动结束此次测试</div>
+          <!-- <div class="imgnext"><img src="images/nextpage.png"></div> -->
+        </div>
+
+        <div class="slide-container">
+          <div class="music-all" style="width:100%">
+            <audio id="music8" class="music"   src="music/9.mp3"  >
+            您的浏览器不支持 audio 标签。
+            </audio> 
+            <p><img class="bofang" src="images/bofang.png">请播放音乐</p>
+          </div> 
+          <div class="miaoshu"><img src="images/Atom2.png"></div>
+          <div><img  class="robotimg" src="images/wenhao.png"></div>
+          <div class="robot-div"><input type="text" class="robotinput" name="Atom" placeholder="请输入英文名（首字母大写）或电影名" /></div>
+          <div class="qt">
+            <button class="queding" onclick="queding('Atom','铁甲钢拳',8)"></button>
+            <button class="tishi" onclick="tishi('images/Atom1.png')"></button>
+          </div>
+          
+          <div><img class="imgbefore"><img class="imgnext"></div>
+          <div class="tips1">向下滑动结束此次测试</div>
+         <!--  <div class="imgnext"><img src="images/nextpage.png"></div> -->
+        </div>
+
+
+
+        <div class="slide-container">
+          <div class="music-all" style="width:100%">
+            <audio id="music9" class="music"   src="music/10.mp3"  >
+            您的浏览器不支持 audio 标签。
+            </audio> 
+            <p><img class="bofang" src="images/bofang.png">请播放音乐</p>
+          </div> 
+          <div class="miaoshu"><img src="images/马文2.png"></div>
+          <div><img  class="robotimg" src="images/wenhao.png"></div>
+          <div class="robot-div"><input type="text" class="robotinput" name="马文" placeholder="请输入中文名（2字）或电影名" /></div>
+          <div class="qt">
+            <button class="queding" onclick="queding('马文','银河系漫游指南',9)"></button>
+            <button class="tishi" onclick="tishi('images/马文1.png')"></button>
+          </div>
+         
+         <div><img class="imgbefore"><img class="imgnext"></div>
+          <div class="tips1">向下滑动结束此次测试</div>
+          <!-- <div class="imgnext"><img src="images/nextpage.png"></div> -->
+        </div>
+
+
+        <div class="slide-container">
+          <div class="music-all" style="width:100%">
+            <audio id="music10" class="music"   src="music/11.mp3"  >
+            您的浏览器不支持 audio 标签。
+            </audio> 
+            <p><img class="bofang" src="images/bofang.png">请播放音乐</p>
+          </div> 
+          <div class="miaoshu"><img src="images/安德鲁2.png"></div>
+          <div><img  class="robotimg" src="images/wenhao.png"></div>
+          <div class="robot-div"><input type="text" class="robotinput" name="安德鲁" placeholder="请输入中文名（3字）或电影名" /></div>
+          <div class="qt">
+            <button class="queding" onclick="queding('安德鲁','机器管家',10)"></button>
+            <button class="tishi" onclick="tishi('images/安德鲁1.png')"></button>
+          </div>
+          
+          <div><img class="imgbefore"><img class="imgnext"></div>
+          <div class="tips1">向下滑动结束此次测试</div> 
+         <!--   <div class="imgnext"></div>
+         <div class="imgnext"><img src="images/nextpage.png"></div> -->
+        </div>
+
+       
+
+
+
+      <div class="slide-container">
+          <div class="music-all" style="width:100%">
+            <audio id="music11" class="music"   src="music/12.mp3"  >
+            您的浏览器不支持 audio 标签。
+            </audio> 
+            <p><img class="bofang" src="images/bofang.png">请播放音乐</p>
+          </div> 
+          <div class="miaoshu"><img src="images/爱德华2.png"></div>
+          <div><img  class="robotimg" src="images/wenhao.png"></div>
+          <div class="robot-div"><input type="text" class="robotinput" name="爱德华" placeholder="请输入中文名（3字）" /></div>
+          <div class="qt">
+            <button class="queding" onclick="queding('爱德华',null,11)"></button>
+            <button class="tishi" onclick="tishi('images/爱德华1.png')"></button>
+          </div>
+          
+          <div><img class="imgbefore"><img class="imgnext"></div>
+          <div class="tips1">向下滑动结束此次测试</div> 
+         <!--   <div class="imgnext"></div>
+         <div class="imgnext"><img src="images/nextpage.png"></div> -->
+        </div>
+      
+
+      
+        <div class="slide-container">
+          <div class="music-all" style="width:100%">
+            <audio id="music12" class="music"   src="music/13.mp3"  >
+            您的浏览器不支持 audio 标签。
+            </audio> 
+            <p><img class="bofang" src="images/bofang.png">请播放音乐</p>
+          </div> 
+          <div class="miaoshu"><img src="images/大卫2.png"></div>
+          <div><img  class="robotimg" src="images/wenhao.png"></div>
+          <div class="robot-div"><input type="text" class="robotinput" name="大卫" placeholder="请输入中文名（2字）或电影名（4字）" /></div>
+          <div class="qt">
+            <button class="queding" onclick="queding('大卫','人工智能',12)"></button>
+            <button class="tishi" onclick="tishi('images/大卫1.png')"></button>
+          </div>
+          
+          <div><img class="imgbefore"></div>
+          <div class="tips1">向下滑动结束此次测试</div>
+         <!--  <div class="imgnext"><img src="images/nextpage.png"></div> -->
+        </div>
+
+
+      </div>  
+       
+
+      </div>  
+    </li>
+    <li class="liBg3"> 
+    
+    </li>
+  </ul>
+</section>
+<script src="js/zepto-touch.min.js"></script>
+<script src="js/index.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script> 
+<script>
+  var windowwidth = $(window).width();
+  var windowheight= $(window).height();
+  console.log("windowwidth:"+windowwidth);
+  console.log("windowheight:"+windowheight);
+  var a=windowwidth/10+"px";
+  $("html").css("font-size",a);
+  $("body").css("font-size","16px");
+  jQuery1_11_1(".imgnext").attr("src", "images/nextpage.png");
+  jQuery1_11_1(".imgbefore").attr("src", "images/beforepage.png");
+/*  $(".slide-container").css("width",windowwidth);
+  $(".slide-container").css("height",windowheight);*/
+</script>
+<script>
+function tishi(tmp){
+  jQuery1_11_1(".robotimg").attr("src", tmp);
+}
+
+function queding(tmp1,tmp2,i){
+  console.log("tmp1:"+tmp1);
+  
+  var inputtext = jQuery1_11_1("input[class=robotinput]:eq("+i+")").val();
+  console.log("inputtext:"+inputtext);
+  if (inputtext == tmp1 || inputtext == tmp2) {
+        jQuery1_11_1(".robotimg").attr("src", "images/"+tmp1+".png");
+  }else {
+        jQuery1_11_1(".robotimg").attr("src", "images/wrong.png");
+  }
+}
+
+jQuery1_11_1(function(){
+	jQuery1_11_1(".slide-container").hide();
+	jQuery1_11_1(".slide-container:first").show();
+	jQuery1_11_1(".slide-container").each(function(){
+		var index=jQuery1_11_1(".slide-container").index(this);
+
+
+ jQuery1_11_1(this).find(".bofang").click(function(){
+     jQuery1_11_1(".bofang").eq(index).attr("src","images/zanting.png");
+    var audio = document.getElementById("music"+index);
+    if(audio!==null){             
+          //检测播放是否已暂停.audio.paused 在播放器播放时返回false.<span style="font-family: Arial, Helvetica, sans-serif;">在播放器暂停时返回true</span>  
+          if(!audio.paused)  
+          {                 
+              audio.pause();    // 这个就是暂停//audio.play();// 这个就是播放  
+               jQuery1_11_1(".bofang").eq(index).attr("src","images/bofang.png");
+          }else{
+              audio.play();
+              jQuery1_11_1(".bofang").eq(index).attr("src","images/zanting.png");
+          }
+    };
+ });
+
+
+     /* jQuery1_11_1(".imgnext").on("touchstart",function(){*/
+
+      jQuery1_11_1(this).find(".imgnext").click(function(){
+      jQuery1_11_1(".slide-container").eq(index).addClass("border").siblings().removeClass("border");
+      jQuery1_11_1(".slide-container").eq(index).next().find(".robotimg").attr("src","images/wenhao.png");
+      jQuery1_11_1(".slide-container").eq(index).hide().next().show(); 
+      console.log("index:"+index);
+      //var audio = jQuery1_11_1(".music").eq(index);
+      var audio = document.getElementById("music"+index);
+      console.log("audio:"+audio.paused);
+      if(audio!==null){             
+          //检测播放是否已暂停.audio.paused 在播放器播放时返回false.<span style="font-family: Arial, Helvetica, sans-serif;">在播放器暂停时返回true</span>  
+          if(!audio.paused)  
+          {                 
+              audio.pause();    // 这个就是暂停//audio.play();// 这个就是播放  
+          }
+      };
+      console.log("nextpage"+index);
+      jQuery1_11_1(".slide-container").eq(index).next().find(".robotinput").attr("value","");
+     /* if (index < 11) {
+        jQuery1_11_1(".slide-container").eq(index).hide().next().show(); 
+      } else {
+        console.log("the lastpage:"+index);
+        jQuery1_11_1(".slide-container").eq(index).hide();
+      /*  jQuery1_11_1(".liBg3").show().style;
+      }*/
+      
+    });
+    /*jQuery1_11_1(".imgbefore").on("touchstart",function(){*/
+    jQuery1_11_1(this).find(".imgbefore").click(function(){
+     /* jQuery1_11_1(".slide-container").eq(index).addClass("border").siblings().removeClass("border");*/
+     jQuery1_11_1(".slide-container").eq(index).addClass("border").siblings().removeClass("border");
+      jQuery1_11_1(".slide-container").eq(index).prev().find(".robotimg").attr("src","images/wenhao.png");
+      jQuery1_11_1(".slide-container").eq(index).hide().prev().show(); 
+      var audio = document.getElementById("music"+index);
+        
+        if(audio!==null){             
+            //检测播放是否已暂停.audio.paused 在播放器播放时返回false.<span style="font-family: Arial, Helvetica, sans-serif;">在播放器暂停时返回true</span>  
+            if(!audio.paused)  
+            {                 
+                audio.pause();    // 这个就是暂停//audio.play();// 这个就是播放  
+            }
+        };
+        console.log("beforepage:"+index);
+        jQuery1_11_1(".slide-container").eq(index).prev().find(".robotinput").attr("value","");
+    });
+
+
+	})
+})
+</script>
+
+<script type="text/javascript" src="js/pageResponse.min.js"></script>
+<script type="text/javascript">
+window.onload = window.onresize = function(){
+    pageResponse({
+        selectors : '.page',     //模块选择器，使用querySelectorAll的方法
+        mode : 'contain',     // auto || contain || cover ，默认模式为auto 
+        width : '320',      //输入页面的宽度，只支持输入数值，默认宽度为320px
+        height : '504'      //输入页面的高度，只支持输入数值，默认高度为504px
+    })
+}
+</script>
+
+<div style="display:none;">
+            <script src="http://s95.cnzz.com/z_stat.php?id=1254115685&amp;web_id=1254115685"
+            language="JavaScript">
+            </script>
+</div>
+
+
+</body>
+</html>
